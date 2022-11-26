@@ -1,0 +1,216 @@
+:root{
+    --primary-digit: hsl(172, 67%, 45%);
+    --inner-bg: hsl(183, 100%, 15%);
+    --reset-button: hsl(186, 14%, 43%);
+    --primary-letter: hsl(184, 14%, 56%);
+    --input-background: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White-background: hsl(0, 0%, 100%);
+}
+
+
+/* CSS reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+img,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+.logo {
+    margin: 12rem auto 0;
+}
+
+body{
+    background-color: var(--input-background);
+    font-size: 1.6rem;
+    font-family: 'Space Mono', monospace;
+}
+
+main{
+   background-color: var(--White-background);
+   width: 700px;
+   display: flex;
+   justify-content: space-between;
+   gap: 7rem;
+   margin: 7rem auto;
+   border-radius: 1.2rem;
+   padding: 2rem;
+   color: var(--reset-button);
+   
+}
+.left-area{
+    flex: 1;
+    font-weight: 700;
+
+}
+
+.num{
+    border: 0;
+    outline: none;
+    background-color: var(--Very-light-grayish-cyan);
+    padding: 0.5rem;
+    /* opacity: 0.5; */
+    text-align: center;
+    /* margin-top: 8rem; */
+    width: 280px;
+    border-radius: 0.4rem;
+    text-align: right;
+}
+.choice-btn{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    /* margin-right: 3rem; */
+}
+button{
+    border: 0;
+    outline: none;
+    background-color: var(--inner-bg);
+    width: 75px;
+    color: var(--White-background);
+    border-radius: 0.4rem;
+    cursor: pointer;
+    padding: 0.6rem 0;
+}
+button:focus{
+    background-color: var(--primary-digit);
+    color: var(--inner-bg);
+} 
+.choose-input{
+    width: 75px;
+    background-color: var(--Very-light-grayish-cyan);
+    border: 0;
+    outline: var(--input-background);
+    text-align: right;
+    border-radius: 0.4rem;
+}
+.choose-input:focus{
+    border: 2px solid var(--primary-digit);
+    border-radius: 0.4rem;
+}
+
+.right-area{
+    flex: 1;
+    padding: 2rem;
+    background-color: var(--inner-bg);
+    color: var(--White-background);
+    border-radius: 1.2rem;
+}
+
+.label-text {
+    display: flex;
+    justify-content: space-between;
+}
+.label-text small{
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    align-self: center;
+    color: red;
+    visibility: hidden;
+}
+.num.error{
+    border: 1.5px solid red;
+}
+
+.reset-button{
+    display: block;
+    width: 100%;
+    border: 0;
+    background-color: var(--primary-letter);
+    padding: 0.5rem 3rem;
+    opacity: 0.5;
+    text-align: center;
+    margin-top: 11rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+/* Utility class */
+.small-letter{
+    font-size: 1.2rem;
+    opacity: 0.7;
+} 
+.special-digit{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-digit);
+}
+.flex-area {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.margin-bottom {
+    margin-bottom: 2rem;
+}
+.input-icon {
+    position: absolute;
+    top: 0.9rem;
+    left: 0.9rem;
+}
+
+
+@media(max-width: 700px){
+    main{
+        width: 500px;
+        gap: 2rem;
+    }
+    .num{
+        width: 210px;
+    }
+    button{
+        width: 52px;
+    }
+    .choose-input{
+        width: 55px;
+        font-size: 1.23rem;
+    }
+}
+@media(max-width: 500px) {
+    main{
+        flex-direction: column;
+        width: 100%;
+    }
+    .num{
+        width: 90%;
+    }
+    button {
+        width: 80px;
+    }
+    .choose-input{
+        width: 80px;
+    }
+}
+@media(max-width: 400px) {
+    body {
+        font-size: 1.9rem;
+    }
+    .choice-btn{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .num{
+        width: 100%;
+    }
+    button {
+        width: 100%;
+    }
+    .choose-input {
+        width: 100%;
+    }
+}
