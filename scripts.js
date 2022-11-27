@@ -6,6 +6,7 @@ const numPeople = document.querySelector('#people')
 const tipAmount = document.querySelector('#tip-amount')
 const totalAmount = document.querySelector('#total-amount')
 const resetButton = document.querySelector('#reset')
+const errorMessage = document.querySelector('.error-message')
 let billValue
 let choiceValue
 let numPeopleValue
@@ -19,6 +20,7 @@ numPeople.addEventListener('keyup', (e) => {
     numPeopleValue = Number(numPeople.value.trim())
     if(numPeople.classList.contains("error")){
         numPeople.classList.remove("error")
+        errorMessage.style.visibility = "hidden";
     }
 })
 
@@ -33,6 +35,7 @@ chooseBtn.addEventListener('click', (e) => {
     }
     else{
         numPeople.classList.add("error")
+        errorMessage.style.visibility = "visible";
     }
     }
 })
@@ -56,7 +59,7 @@ tipInput.addEventListener('change', (e) => {
 
     let totalPerPerson = (billValue + Number(tip))/numPeopleValue
     totalPerPerson = totalPerPerson.toFixed(2)
-    
+
     totalAmount.innerText = `$${totalPerPerson}`
 }
 

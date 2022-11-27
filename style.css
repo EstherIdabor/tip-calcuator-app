@@ -1,9 +1,9 @@
 :root{
-    --primary-digit: hsl(172, 67%, 45%);
-    --inner-bg: hsl(183, 100%, 15%);
-    --reset-button: hsl(186, 14%, 43%);
-    --primary-letter: hsl(184, 14%, 56%);
-    --input-background: hsl(185, 41%, 84%);
+    --Strong-Cyan: hsl(172, 67%, 45%);
+    --Very-dark-Cyan: hsl(183, 100%, 15%);
+    --Dark-greyish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-greyish-cyan: hsl(185, 41%, 84%);
     --Very-light-grayish-cyan: hsl(189, 41%, 97%);
     --White-background: hsl(0, 0%, 100%);
 }
@@ -36,7 +36,7 @@ svg {
 }
 
 body{
-    background-color: var(--input-background);
+    background-color: var(--Light-greyish-cyan);
     font-size: 1.6rem;
     font-family: 'Space Mono', monospace;
 }
@@ -50,7 +50,7 @@ main{
    margin: 7rem auto;
    border-radius: 1.2rem;
    padding: 2rem;
-   color: var(--reset-button);
+   color: var(--Dark-greyish-cyan);
    
 }
 .left-area{
@@ -88,7 +88,7 @@ input[type=number ]{
 button{
     border: 0;
     outline: none;
-    background-color: var(--inner-bg);
+    background-color: var(--Very-dark-Cyan);
     width: 75px;
     color: var(--White-background);
     border-radius: 0.4rem;
@@ -96,26 +96,26 @@ button{
     padding: 0.6rem 0;
 }
 button:focus{
-    background-color: var(--primary-digit);
-    color: var(--inner-bg);
+    background-color: var(--Strong-Cyan);
+    color: var(--Very-dark-Cyan);
 } 
 .choose-input{
     width: 75px;
     background-color: var(--Very-light-grayish-cyan);
     border: 0;
-    outline: var(--input-background);
+    outline: var(--Light-greyish-cyan);
     text-align: right;
     border-radius: 0.4rem;
 }
 .choose-input:focus{
-    border: 2px solid var(--primary-digit);
+    border: 2px solid var(--Strong-Cyan);
     border-radius: 0.4rem;
 }
 
 .right-area{
     flex: 1;
     padding: 2rem;
-    background-color: var(--inner-bg);
+    background-color: var(--Very-dark-Cyan);
     color: var(--White-background);
     border-radius: 1.2rem;
 }
@@ -139,7 +139,7 @@ button:focus{
     display: block;
     width: 100%;
     border: 0;
-    background-color: var(--primary-letter);
+    background-color: var(--Grayish-cyan);
     padding: 0.5rem 3rem;
     opacity: 0.5;
     text-align: center;
@@ -156,7 +156,7 @@ button:focus{
 .special-digit{
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--primary-digit);
+    color: var(--Strong-Cyan);
 }
 .flex-area {
     display: flex;
