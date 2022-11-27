@@ -2,7 +2,7 @@
 
 This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX).
 
-![](images/desktop-preview.jpg)
+![](./design/desktop-preview.jpg)
 
 ## Table of contents
 
@@ -10,8 +10,6 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
   - [Links](#links)
   - [Built with](#built-with)
 
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 A simple tip-calculator App that takes in the bill of a product or food at a restaurant for example, the number of persons to pay, the tip they intend to pay and calculates the total amount to be paid per person, the tip inclusive.
