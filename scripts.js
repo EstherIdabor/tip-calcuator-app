@@ -12,10 +12,7 @@ let numPeopleValue
 let tipInputValue
 
 billAmount.addEventListener('keyup', (e) => {
-    // console.log(billAmount.value)
     billValue = Number(billAmount.value.trim())
-    // console.log(billValue)
-    // console.log(typeof(billValue))
 })
 
 numPeople.addEventListener('keyup', (e) => {
@@ -23,55 +20,43 @@ numPeople.addEventListener('keyup', (e) => {
     if(numPeople.classList.contains("error")){
         numPeople.classList.remove("error")
     }
-    // console.log(numPeopleValue)
-    // console.log(typeof(numPeopleValue))
 })
 
 chooseBtn.addEventListener('click', (e) => {
     if(e.target.classList.contains('choice')){
        choiceValue = Number(e.target.innerHTML.slice(0, -1))
 
-    //    console.log(typeof(choiceValue))
-    //    console.log(billValue)
-    //    console.log(numPeopleValue)
-
     //    Check to see if the input for the number of persons paying the bill is not empty if it isnt 
-    //    we call the calculateBill(), if  is we throw an error message and attach the error class
+    //    we call the calculateBill(), if  it is we throw an error message and attach the error class
     if(numPeopleValue){
-        // console.log("not empty")
         calculateBill()
     }
     else{
         numPeople.classList.add("error")
     }
-
-    //    calculateBill()
     }
 })
 
-tipInput.addEventListener('oninput', (e) => {
+tipInput.addEventListener('change', (e) => {
     tipInputValue = Number(tipInput.value.trim())
     if(!choiceValue && numPeopleValue){
         choiceValue = tipInputValue
         calculateBill()
     }
-
-    // console.log(tipInputValue)
     
 })
 
 // 
  function calculateBill() {
-    // console.log(choiceValue)
-    // console.log(billAmount)
-    const tip = choiceValue/100 * billValue
-    console.log(tip)
-    const tipPerPerson = Number(tip)/numPeopleValue
-    console.log(tipPerPerson)
+    let tip = choiceValue/100 * billValue
+    let tipPerPerson = Number(tip)/numPeopleValue
+    tipPerPerson = tipPerPerson.toFixed(2)
 
     tipAmount.innerText= `$${tipPerPerson}`
 
-    const totalPerPerson = (billValue + Number(tip))/numPeopleValue
+    let totalPerPerson = (billValue + Number(tip))/numPeopleValue
+    totalPerPerson = totalPerPerson.toFixed(2)
+    
     totalAmount.innerText = `$${totalPerPerson}`
 }
 
