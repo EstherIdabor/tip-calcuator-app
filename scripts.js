@@ -49,7 +49,7 @@ chooseBtn.addEventListener('click', (e) => {
     }
 })
 
-tipInput.addEventListener('keyup', (e) => {
+tipInput.addEventListener('oninput', (e) => {
     tipInputValue = Number(tipInput.value.trim())
     if(!choiceValue && numPeopleValue){
         choiceValue = tipInputValue

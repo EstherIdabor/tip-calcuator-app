@@ -19,14 +19,7 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
-
-### The challenge
-
-Users should be able to:
-
-- View the optimal layout for the app depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Calculate the correct tip and total cost of the bill per person
+A simple tip-calculator App that takes in the bill of a product or food at a restaurant for example, the tip one intends to pay and calculates the total amount to be paid, the tip inclusive.
 
 ### Screenshot
 
@@ -50,13 +43,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- CSS
+- vanilla javascript
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
